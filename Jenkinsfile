@@ -1,4 +1,4 @@
-pipeline {
+{
     agent any
     stages {
         stage('Non-Parallel Stage') {
@@ -6,7 +6,7 @@ pipeline {
                 echo 'This stage will be executed first.'
             }
         }
-        stage('Parallel Stage')
+        stage('Parallel Stage') {
             failFast true
             parallel {
                 stage('Branch A') {
